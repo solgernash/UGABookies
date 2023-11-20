@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Homepage />} />
           <Route path='/Authenticated' element={<AuthPage />} />
+          <Route path='/BetForm' element={<Homepage />} />
         </Routes>
       </div>
     </Router>
