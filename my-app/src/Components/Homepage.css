@@ -1,4 +1,4 @@
-.Title {
+  .Title {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 100px 1fr;
@@ -55,6 +55,72 @@
     color: #14FF00;
   }
 
+  .Matchup {
+    background-color: #353434;
+  }
+
   .App {
     text-align: center;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    background-color: lightgray;
+    padding: 10px; /* Add padding as needed */
+  }
+  
+  .navbar-logo {
+    width: 150px; 
+    height: auto; 
+    margin-right: 10px;
+   }
+  
+  .navbar ul {
+    list-style: none;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-left: 250px;
+    padding-right: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin-right: 20px;
+    
+  }
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    
+  }
+  .navbar-buttons {
+    padding-left: 40px;
+    display: flex;
+    margin-left: 100px;
+  }
+  
+  .signup-button,
+  .login-button {
+    color: red;
+    background-color: black;
+    margin: 10px;
+    font-size: 16px; 
+    padding: 10px 20px;
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    &:hover {
+      background-color: #ffffff; 
+      color: black; 
+    }
+  }
+  
+  .stacked-header {
+    margin: 0;
+  }
+  
+  .h1 {
+    padding-right: 100px;
   }
