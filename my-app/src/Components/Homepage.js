@@ -45,7 +45,7 @@ const Homepage = () => {
                 <li><a href="/how-to-play">How to Play</a></li>
             </ul>
             <div className="navbar-buttons">
-                <Link to="/"> 
+                <Link to="/Authenticated"> 
                 <button className="signup-button">Signup</button>
                 <button className="login-button">Login</button>
                 </Link>
