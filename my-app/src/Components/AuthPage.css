@@ -1,0 +1,43 @@
+.logout-button {
+    color: red;
+    background-color: black;
+    margin: 10px;
+    font-size: 16px; 
+    padding: 10px 20px;
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    &:hover {
+      background-color: #ffffff; 
+      color: black; 
+    }
+}
+
+  body {
+    background-color: #353434;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #000; 
+  }
+  
+  .box {
+    text-align: center;
+    background: none;
+  }
+  
+  .box img {
+    width: 300px; 
+    height: auto; 
+  }
+  
+  .box p {
+    margin: 8px 0;
+    font-weight: bold;
+  }
+  .matchups-container h2 {
+    color: white;
+  }
+  
