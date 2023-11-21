@@ -1,7 +1,11 @@
 import './AuthPage.css';
 import { Link } from 'react-router-dom';
+import MatchupBtns from './MatchupBtns';
+import { useState } from 'react';
+import { DUMMY_PROFILES } from './DUMMY_PROFILES';
 
 const AuthPage = () => {
+    const [matchupList, setMatchupList] = useState(DUMMY_PROFILES);
 
     return (
         <>
@@ -28,25 +32,14 @@ const AuthPage = () => {
             <div class="matchups-container" id="matchupsContainer">
                 <script src="popup.js" defer>
                 </script>
-                <div class="container">
-                    <button class="box" id = "basketBtn">
-                        <img src={require('./basketball.jpeg')} alt="Basketball" class="sport-pic" />
-                        <p>Basketball</p>
-                    </button>
-                    <button class="box" onclick="showMatchups('football')">
-                        <img src={require('./football.jpeg')} alt="Football" class="sport-pic" />
-                        <p>Football</p>
-                    </button>
-                    <button class="box" onclick="showMatchups('frisbee')">
-                        <img src={require('./frisbee.jpeg')} alt="Ultimate Frisbee" class="sport-pic" />
-                        <p>Ultimate Frisbee</p>
-                    </button>
-                </div>
                 <div id="matchupsContent">
                     <h2>Matchups</h2>
                 </div>
-            
             </div>
+
+            <section> 
+                <MatchupBtns users={matchupList}/>
+            </section>
         </>
     )
 };
