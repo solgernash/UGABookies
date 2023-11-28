@@ -1,0 +1,23 @@
+export const DUMMY_FOOTBALL = [
+    {
+        id: '001',
+        img: 'https://facts.net/wp-content/uploads/2023/09/11-facts-about-pink-panther-the-pink-panther-1694403580.jpg',
+        name: 'Pink Panthers',
+        rival: 'End Zone Rangers',
+        logo: 'https://trinitonian.com/wp-content/uploads/2019/09/flag-football-1280x914.png'
+    },
+    {
+        id: '002',
+        img: 'https://media.istockphoto.com/id/165079354/vector/mad-bulldozer.jpg?s=612x612&w=0&k=20&c=UVsAoP60_iDAM8sYfQ1g3bOFrBjUA936Ip9YXzNn1e0=',
+        name: "The Bulldozers",
+        rival: 'Power Tanks',
+        logo: 'hhttps://static.wikia.nocookie.net/listofdeaths/images/c/cd/KV-6_first_death.png/revision/latest/scale-to-width-down/1200?cb=20221030100058'
+    },
+    {
+        id: '002',
+        img: 'https://bcassetcdn.com/public/blog/wp-content/uploads/2022/05/24220846/zodiac-football-league-or-scorpio-stingers-by-dan-blessing-dribbble.png',
+        name: 'Foot Ballers',
+        rival: 'Bench Warmers',
+        logo: 'https://d393ynejnklmr1.cloudfront.net/media/profiles/team-1518961869.26122-bench-warmers-fc-anderton.png'
+    }
+];
