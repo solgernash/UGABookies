@@ -1,7 +1,10 @@
 import React from "react";
 import { useState, useRef } from "react";
+import MatchupBtns from './MatchupBtns';
+import { DUMMY_PROFILES } from './DUMMY_PROFILES';
 
 const BetPlacer = (props) => {
+    const [matchupList, setMatchupList] = useState(DUMMY_PROFILES);
     const dropdown = useRef();
     const [enteredName, setEnteredName] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
@@ -25,6 +28,9 @@ const BetPlacer = (props) => {
         <>
             <div class="parlay" id="parlay">
               <a href="Authenticated"><img src={require('./bulldog.png')} alt="Bulldog Logo" class = "parlay-img"></img></a>
+              <section> 
+                <MatchupBtns users={matchupList}/>
+            </section>
               <h1 class = "parlay-h1">Your entry</h1>
               <form onSubmit = {submitHandler}>
                 <select ref={dropdown}>
