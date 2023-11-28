@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import MatchupBtns from './MatchupBtns';
 import { DUMMY_PROFILES } from './DUMMY_PROFILES';
 import './AuthPage.css'; 
 
@@ -16,7 +15,7 @@ const AuthPage = () => {
         {
             name: 'Ultimate',
             image: 'https://th.bing.com/th/id/OIP.IRCfUZYp0Y_ve-LTvArcHwHaEy?w=264&h=180&c=7&r=0&o=5&dpr=2&pid=1.7',
-            link: '/ultimate', // Replace with ultimate route
+            link: '/ultimate_frisbee', // Replace with ultimate route
         },
         {
             name: 'Football',

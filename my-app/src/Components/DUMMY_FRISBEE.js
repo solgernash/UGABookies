@@ -18,6 +18,6 @@ export const DUMMY_FRISBEE = [
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrIZBsR3E5DHL8IxlkDotQ8sGO81VgvF3Zkw&usqp=CAU',
         name: 'Game of Throws',
         rival: 'Frisbeasts',
-        img: 'https://cdn1.vectorstock.com/i/1000x1000/90/20/cartoon-beast-vector-38009020.jpg'
+        logo: 'https://cdn1.vectorstock.com/i/1000x1000/90/20/cartoon-beast-vector-38009020.jpg'
     }
 ];
