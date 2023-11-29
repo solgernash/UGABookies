@@ -62,6 +62,8 @@
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr;
   background-color: #353434;
+  justify-content: center;
+  align-items: center;
 }
 
 .teamlist {
@@ -103,12 +105,35 @@
   color: #C3DBC5
 }
 
+/*-------------------------------------------------------------------------*/
+
+.custom-select {
+  min-width: 350px;
+  text-align: center;
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color:#F2F4F3;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
 /*--------------------------------------------------------------------------------------------*/
 
 .users {
   margin: 2rem auto;
   width: 90%;
   max-width: 40rem;
+  background-color: red;
 }
 
 .users ul {
