@@ -20,7 +20,7 @@ const MatchupList = (props) => {
                                 logo={matchup.logo}
                             />
                         </Card>
-                    ))};
+                    ))}
                 </ul>
             </Card>
         </>
