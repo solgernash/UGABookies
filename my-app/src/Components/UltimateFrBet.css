@@ -1,123 +1,222 @@
 .logout-button {
-    color: red;
-    background-color: black;
-    margin: 10px;
-    font-size: 16px; 
-    padding: 10px 20px;
-    font-style: bold;
-    font-family: 'Times New Roman', Times, serif;
-    &:hover {
-      background-color: #ffffff; 
-      color: black; 
-    }
+  color: red;
+  background-color: black;
+  margin: 10px;
+  font-size: 16px; 
+  padding: 10px 20px;
+  font-style: bold;
+  font-family: 'Times New Roman', Times, serif;
+  &:hover {
+    background-color: #ffffff; 
+    color: black; 
   }
+}
+
+.navbar {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  background-color: lightgray;
+  padding: 10px; /* Add padding as needed */
+}
+
+.navbar-logo {
+  width: 150px; 
+  height: auto; 
+  margin-right: 10px;
+ }
+
+.navbar ul {
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-left: 250px;
+  padding-right: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
   
-  .navbar {
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
-    background-color: lightgray;
-    padding: 10px; /* Add padding as needed */
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-buttons {
+  padding-left: 40px;
+  display: flex;
+  margin-left: 100px;
+}
+
+.stacked-header {
+  margin: 0;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+.BetForm {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr;
+  background-color: #353434;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamlist {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.InputBet {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: center;
+}
+
+.parlay {
+  width: 400px;
+  background:#260008;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 30px 30px;
+  color:#ffffff;
+  text-align: center;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.Header {
+  font-size: 38px;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #C3DBC5
+}
+
+/*-------------------------------------------------------------------------*/
+
+.custom-select {
+  min-width: 350px;
+  text-align: center;
+  margin: auto;
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color:#F2F4F3;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.bet-input {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  border: 2px solid #dee1e2;
+  color: rgb(14, 14, 16);
+  background: #dee1e2;
+  display: block;
+  height: 36px;
+  :hover {
+      border-color: #ccc;
   }
-  
-  .navbar-logo {
-    width: 150px; 
-    height: auto; 
-    margin-right: 10px;
-   }
-  
-  .navbar ul {
-    list-style: none;
-    text-align: center;
-    font-size: 30px;
-    margin: 0;
-    padding-left: 250px;
-    padding-right: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  :focus{
+      border-color: #9147ff;
+      background: #fff;
   }
-  
-  .navbar li {
-    display: inline-block;
-    margin-right: 20px;
-    
+}
+
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
   }
-  .navbar a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .navbar-buttons {
-    padding-left: 40px;
-    display: flex;
-    margin-left: 100px;
-  }
-  
-  .stacked-header {
-    margin: 0;
-  }
-  
-  /*--------------------------------------------------------------------------------------------*/
-  
-  .BetForm {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 2fr;
-    background-color: #353434;
-  }
-  
-  .teamlist {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  
-  .InputBet {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    align-items: center;
-  }
-  
-  .parlay {
-    width: 400px;
-    background:#260008;
-    border-radius: 6px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 30px 30px;
-    color:#ffffff;
-    text-align: center;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-  }
-  
-  .Header {
-    font-size: 38px;
-    font-weight: 500;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: #C3DBC5
-  }
-  
-  /*--------------------------------------------------------------------------------------------*/
-  
-  .users {
-    margin: 2rem auto;
-    width: 90%;
-    max-width: 40rem;
-  }
-  
-  .users ul {
-    list-style: none;
-    padding: 1rem;
-  }
-  
-  .users li {
-    border: 1px solid #ccc;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-  }
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+.users {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+  background-color: red;
+}
+
+.users ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.users li {
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}

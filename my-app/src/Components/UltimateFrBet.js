@@ -7,23 +7,35 @@ import Card from "./Card";
 
 const UltimateFrBet = (props) => {
     const [matchupList, setMatchupList] = useState(DUMMY_FRISBEE);
-    const dropdown = useRef();
-    const [enteredName, setEnteredName] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
 
-    const nameChangeHandler = (event) => {
-        setEnteredName(event.target.value);
-    }; //nameChangeHandler
+    const options = [
+        {value: '', text: '--Choose an option--'},
+        {value: 'Air Traffic Control', text: 'Air Traffic Control'},
+        {value: 'Chick Flix', text: 'Chick Flix'},
+        {value: "Daddy's Disk Demons", text: "Daddy's Disk Demons"},
+        {value: 'High Flyers', text: 'High Flyers'},
+        {value: "Game of Throws", text: "Game of Throws"},
+        {value: 'Frisbeasts', text: 'Frisbeasts'},
+    ];
+
+    const [selected, setSelected] = useState(options[0].value);
+
+    const handleChange = event => {
+        setSelected(event.target.value);
+    };
 
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
     };
 
     const submitHandler = (event) => {
+        console.log(selected);
+        console.log(enteredAmount);
+
         event.preventDefault();
-        setEnteredName('');
         setEnteredAmount('');
-        dropdown.current.value = "";
+        setSelected('');
     }; //submitHandler
 
     return(
@@ -45,7 +57,7 @@ const UltimateFrBet = (props) => {
                     </Link>
                 </div>
             </nav>
-
+            
             <div>
                 <h1 className="Header">Your entry</h1>
                 <section className="BetForm"> 
@@ -54,18 +66,20 @@ const UltimateFrBet = (props) => {
                     <section className="InputBet">
                         <Card className="users">
                         <form onSubmit = {submitHandler}>
-                            <select ref={dropdown}>
-                                <option></option>
-                                <option onChange={nameChangeHandler}>Bench Boys vs Brick Layers</option>
-                                <option onChange={nameChangeHandler}>Daddy's Disc Demons vs High Flyers</option>
-                                <option onChange={nameChangeHandler}>Foot Ballers vs Bench Warmers</option>
-                            </select>
-                            <div class = "selector">
-                                <h4>Type out a matchup</h4>
-                                <input type="text" value={enteredName} onChange={nameChangeHandler} />
+                            <div class="custom-select" >
+                                <h4>Select a Team</h4>
+                                <select value={selected} onChange={handleChange}>
+                                    {options.map(option => (
+                                        <option key={option.value} value={option.value}>
+                                            {option.text}
+                                        </option>
+                                    ))}
+                                </select>
+                                <h4> Input Bet Amount</h4>
+                                <input class="bet-input" type = "number" placeholder = "25" min = "20" max = "100000" step = "5" value={enteredAmount} onChange={amountChangeHandler} id = "input-form"/>
+                                <br/>
+                                <button class="button-50" type = "submit" id = "submit-btn">Submit</button>
                             </div>
-                            <input type = "number" placeholder = "25" min = "20" max = "100000" step = "5" value={enteredAmount} onChange={amountChangeHandler} />
-                            <button type = "submit" id = "submit-btn">Submit</button>
                         </form>
                         </Card>
                     </section>
@@ -74,7 +88,6 @@ const UltimateFrBet = (props) => {
             </div>
         </>
     )
-
 };
 
 export default UltimateFrBet;
