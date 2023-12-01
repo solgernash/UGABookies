@@ -5,6 +5,7 @@ import AuthPage from './Components/AuthPage';
 import BasketballBet from './Components/BasketballBet';
 import FootballBet from './Components/FootballBet';
 import UltimateFrBet from './Components/UltimateFrBet';
+import Instructions from './Components/instructions';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Homepage />} />
           <Route path='/Authenticated' element={<AuthPage />} />
+          <Route path='/instructions' element={<Instructions />} />
           <Route path='/Basketball' element={<BasketballBet />} />
           <Route path='/Football' element={<FootballBet />} />
           <Route path='/Ultimate_Frisbee' element={<UltimateFrBet />} />

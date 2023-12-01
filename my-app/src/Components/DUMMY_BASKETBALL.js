@@ -8,7 +8,7 @@ export const DUMMY_BASKETBALL = [
     },
     {
         id: '002',
-        img: 'https://s3.amazonaws.com/file.imleagues/Images/Sports/DefaultLogo/basketball_2_128.png',
+        img: 'https://banner2.cleanpng.com/20180203/xkw/kisspng-basketball-backboard-clip-art-basketball-swoosh-cliparts-5a75db40002a90.4754384115176732800007.jpg',
         name: "Phi Delt",
         rival: 'ATO',
         logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png'

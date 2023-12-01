@@ -1,0 +1,44 @@
+.instruction-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .instruction-box {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 350px;
+    font-size: 20px;
+    height: 150px;
+    padding-left: 10px;
+    background-color: red;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .playheader {
+    display: flex;
+    font-size: larger;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: fantasy;
+  }
+ 
+.back-button {
+    color: red;
+    background-color: black;
+    margin: 10px;
+    font-style: bold;
+    border-radius: 20px;
+    font-size: 16px; 
+    padding: 10px 20px; 
+    font-style: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    &:hover {
+      background-color: white; 
+      color: black; 
+    }
+}

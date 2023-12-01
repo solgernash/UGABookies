@@ -11,7 +11,7 @@ export const DUMMY_FOOTBALL = [
         img: 'https://media.istockphoto.com/id/165079354/vector/mad-bulldozer.jpg?s=612x612&w=0&k=20&c=UVsAoP60_iDAM8sYfQ1g3bOFrBjUA936Ip9YXzNn1e0=',
         name: "The Bulldozers",
         rival: 'Power Tanks',
-        logo: 'hhttps://static.wikia.nocookie.net/listofdeaths/images/c/cd/KV-6_first_death.png/revision/latest/scale-to-width-down/1200?cb=20221030100058'
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Leopard_2_A5_der_Bundeswehr.jpg/1200px-Leopard_2_A5_der_Bundeswehr.jpg'
     },
     {
         id: '002',

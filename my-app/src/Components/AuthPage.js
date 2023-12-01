@@ -33,9 +33,10 @@ const AuthPage = () => {
                     <h1>Bookies</h1>
                 </div>
                 <ul>
-                <li><a href="/sports">*************     </a></li>
+               
+                <li><a href="/bets">How to Play</a></li>
                     <li><a href="/sports">Sports</a></li>
-                    <li><a href="/sports">     *************</a></li>
+                    <li><a href="/bets">My Bets</a></li>
                 </ul>
                 <div className="navbar-buttons">
                     <Link to="/"> 

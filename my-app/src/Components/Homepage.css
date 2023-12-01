@@ -64,10 +64,10 @@
   }
 
   .navbar {
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
+    display: grid;
+    align-items: center; 
     background-color: lightgray;
-    padding: 10px; /* Add padding as needed */
+    padding: 10px; 
   }
   
   .navbar-logo {
@@ -82,7 +82,7 @@
     font-size: 30px;
     margin: 0;
     padding-left: 250px;
-    padding-right: 20px;
+    padding-right: 50px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
   }
   
