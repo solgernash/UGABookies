@@ -54,7 +54,7 @@ const BasketballBet = (props) => {
                 </ul>
                 <div className="navbar-buttons">
                     <Link to="/Authenticated"> 
-                        <button className="logout-button">Logout</button>
+                        <button className="logout-button">Return</button>
                     </Link>
                 </div>
             </nav>

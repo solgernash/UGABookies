@@ -18,10 +18,9 @@ const Homepage = () => {
                 <h1>Bookies</h1>
             </div>
             <ul>
-                <li><a href="/today">Today's Board</a></li>
-                <li><a href="/sports">Sports</a></li>
-                <li><a href="/how-to-play">How to Play</a></li>
+                <Link to="/instructions">How to Play</Link>
             </ul>
+            
             <div className="navbar-buttons">
                 <Link to="/Authenticated"> 
                 <button className="signup-button">Signup</button>
