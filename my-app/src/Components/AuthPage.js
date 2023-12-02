@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { DUMMY_PROFILES } from './DUMMY_PROFILES';
 import './AuthPage.css'; 
 
 const AuthPage = () => {
-    const [matchupList, setMatchupList] = useState(DUMMY_PROFILES);
-
     const sports = [
         {
             name: 'Basketball',
@@ -33,9 +30,9 @@ const AuthPage = () => {
                     <h1>Bookies</h1>
                 </div>
                 <ul>
-                <li><a href="/sports">*************     </a></li>
-                    <li><a href="/sports">Sports</a></li>
-                    <li><a href="/sports">     *************</a></li>
+                <li>*************     </li>
+                    <li><a href="/sports">My Bets</a></li>
+                    <li>     *************</li>
                 </ul>
                 <div className="navbar-buttons">
                     <Link to="/"> 
