@@ -1,6 +1,3 @@
-import bcryptjs from "bcryptjs";
-import User from '../../models/User';
-
 const express = require("express");
 const bcryptjs = require("bcryptjs");
 const userRouter = express.Router();
@@ -19,7 +16,7 @@ userRouter.post("/signup", async (req,res) =>  {
                 .status(400)
                 .json({msg: "Password should be atleast 6 characters"});
         }
-        if (confirmPassowrd !== password) {
+        if (confirmPassword !== password) {
             return res.status(400).json({msg: "Both the passwords don't match"});
         }
         const existingUser = await User.findOne({email});

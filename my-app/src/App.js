@@ -1,6 +1,6 @@
 import './App.css';
-import users from './routes/api/users';
-import User from './models/User';
+import { useState, useEffect} from 'react';
+import axios from 'axios';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './Components/Homepage';
 import AuthPage from './Components/AuthPage';
@@ -9,31 +9,7 @@ import FootballBet from './Components/FootballBet';
 import UltimateFrBet from './Components/UltimateFrBet';
 import UserContext from './Components/context/UserContext';
 
-
-const users = require('./routes/api/users');
-app.use('/routes/api/users', users);
-
-//mongo hookup
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
-const mongoose = require('mongoose');
-const cors = require('cors');
-
-//connect database
-app.use(cors({origin: true, credentials: true}));
-app.use(express.json({extended:false}));
-
-const conn_str = 'mongodb+srv://ethanapplecarroll:fortniteisthebestgame@cluster0.xnydhlh.mongodb.net/?retryWrites=true&w=majority';
-mongoose.set('strictQuery', false);
-mongoose.connect(conn_str)
-  .then(() => {
-    app.listen(port);
-    console.log('MongoDB Connection Succeeded...');
-  })
-  .catch (err => {
-    console.log('err');
-  });
+const Server = require('./server');
 
 const App = () => {
   const [userData, setUserData] = useState({
@@ -65,9 +41,9 @@ const App = () => {
     };
 
     checkLoggedIn();
-  }, []); 
+  }, []);
 
-};
+
 
   return (
     <UserContext.Provider value ={{userData, setUserData}}>
@@ -83,7 +59,8 @@ const App = () => {
         </div>
       </Router>
     </UserContext.Provider>
-  );
-  
+  )
+};
+
 
 export default App;
