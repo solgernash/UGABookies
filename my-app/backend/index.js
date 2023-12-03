@@ -17,19 +17,22 @@ mongoose.connect(conn_str)
 
 // Schema for users of app
 const UserSchema = new mongoose.Schema({
-	name: {
-		type: String,
-		required: true,
-	},
-	email: {
-		type: String,
-		required: true,
-		unique: true,
-	},
-	date: {
-		type: Date,
-		default: Date.now,
-	},
+    username: {
+        type: String,
+        required: true,
+		trim: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+		trim: true,
+    },
+    password: {
+        required: true,
+        type: String,
+		minLength: 6,
+    },
 });
 const User = mongoose.model('users', UserSchema);
 User.createIndexes();
@@ -61,11 +64,10 @@ app.post("/register", async (req, resp) => {
 			resp.send(req.body);
 			console.log(result);
 		} else {
-			console.log("User already register");
+			console.log("User already exists");
 		}
 
 	} catch (e) {
 		resp.send("Something Went Wrong");
 	}
 });
-// app.listen(5000);
