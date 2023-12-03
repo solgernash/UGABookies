@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { DUMMY_FRISBEE } from "./DUMMY_FRISBEE";
 import MatchupList from "./MatchupList";
