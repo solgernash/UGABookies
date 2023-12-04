@@ -30,9 +30,7 @@ const FootballBet = (props) => {
                     <h1>Bookies</h1>
                 </div>
                 <ul>
-                    <li><a href="/today">Today's Board</a></li>
-                    <li><a href="/sports">Sports</a></li>
-                    <li><a href="/how-to-play">Current Balance: </a></li>
+                    <li>************************************************************</li>
                 </ul>
                 <div className="navbar-buttons">
                     <Link to="/Authenticated"> 
