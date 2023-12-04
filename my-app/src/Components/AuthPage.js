@@ -31,7 +31,7 @@ const AuthPage = () => {
                 </div>
                 <ul>
                 <li>*************     </li>
-                    <li><a href="/sports">My Bets</a></li>
+                    <li>My Bets</li>
                     <li>     *************</li>
                 </ul>
                 <div className="navbar-buttons">

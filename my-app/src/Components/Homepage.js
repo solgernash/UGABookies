@@ -25,8 +25,9 @@ const Homepage = () => {
                 <Link to="/signup"> 
                 <button className="signup-button">Signup</button>
                 </Link>
+                <Link to="/login">
                 <button className="login-button">Login</button>
-                
+                </Link>
             </div>
             </nav>
 
