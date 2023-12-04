@@ -21,8 +21,8 @@ function App() {
           <Route path='/Basketball' element={<BasketballBet />} />
           <Route path='/Football' element={<FootballBet />} />
           <Route path='/Ultimate_Frisbee' element={<UltimateFrBet />} />
-          <Route path='login' element={<LoginForm />}/>
-          <Route path='signup' element={<Signup />}/>
+          <Route path='/login' element={<LoginForm />}/>
+          <Route path='/signup' element={<Signup />}/>
         </Routes>
       </div>
     </Router>

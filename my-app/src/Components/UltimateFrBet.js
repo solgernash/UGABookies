@@ -3,40 +3,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { DUMMY_FRISBEE } from "./DUMMY_FRISBEE";
 import MatchupList from "./MatchupList";
-import Card from "./Card";
+import BetList from './BetList';
+import UltimateForm from "./UltimateForm";
 
 const UltimateFrBet = (props) => {
     const [matchupList, setMatchupList] = useState(DUMMY_FRISBEE);
-    const [enteredAmount, setEnteredAmount] = useState('');
+    const DUMMY_BETS = [
+        {
 
-    const options = [
-        {value: '', text: '--Choose an option--'},
-        {value: 'Air Traffic Control', text: 'Air Traffic Control'},
-        {value: 'Chick Flix', text: 'Chick Flix'},
-        {value: "Daddy's Disk Demons", text: "Daddy's Disk Demons"},
-        {value: 'High Flyers', text: 'High Flyers'},
-        {value: "Game of Throws", text: "Game of Throws"},
-        {value: 'Frisbeasts', text: 'Frisbeasts'},
+        },
     ];
+    const addUserHandler = (newUser) => {
+        setBetList((prevUsersList) => [
+            ...prevUsersList, {...newUser},
+        ]);
+    }
 
-    const [selected, setSelected] = useState(options[0].value);
-
-    const handleChange = event => {
-        setSelected(event.target.value);
-    };
-
-    const amountChangeHandler = (event) => {
-        setEnteredAmount(event.target.value);
-    };
-
-    const submitHandler = (event) => {
-        console.log(selected);
-        console.log(enteredAmount);
-
-        event.preventDefault();
-        setEnteredAmount('');
-        setSelected('');
-    }; //submitHandler
+    const [betList, setBetList] = useState(DUMMY_BETS);
 
     return(
         <>
@@ -53,7 +36,7 @@ const UltimateFrBet = (props) => {
                 </ul>
                 <div className="navbar-buttons">
                     <Link to="/Authenticated"> 
-                        <button className="logout-button">Logout</button>
+                        <button className="logout-button">Return</button>
                     </Link>
                 </div>
             </nav>
@@ -62,28 +45,8 @@ const UltimateFrBet = (props) => {
                 <h1 className="Header">Your entry</h1>
                 <section className="BetForm"> 
                     <MatchupList users={matchupList} className="teamlist"/>
-
-                    <section className="InputBet">
-                        <Card className="users">
-                        <form onSubmit = {submitHandler}>
-                            <div class="custom-select" >
-                                <h4>Select a Team</h4>
-                                <select value={selected} onChange={handleChange}>
-                                    {options.map(option => (
-                                        <option key={option.value} value={option.value}>
-                                            {option.text}
-                                        </option>
-                                    ))}
-                                </select>
-                                <h4> Input Bet Amount</h4>
-                                <input class="bet-input" type = "number" placeholder = "25" min = "20" max = "100000" step = "5" value={enteredAmount} onChange={amountChangeHandler} id = "input-form"/>
-                                <br/>
-                                <button class="button-50" type = "submit" id = "submit-btn">Submit</button>
-                            </div>
-                        </form>
-                        </Card>
-                    </section>
-
+                    <UltimateForm onAddUser={addUserHandler} />
+                    <BetList users={betList} />
                 </section>
             </div>
         </>
