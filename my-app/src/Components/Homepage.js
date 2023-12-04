@@ -22,10 +22,11 @@ const Homepage = () => {
             </ul>
             
             <div className="navbar-buttons">
-                <Link to="/Authenticated"> 
+                <Link to="/signup"> 
                 <button className="signup-button">Signup</button>
-                <button className="login-button">Login</button>
                 </Link>
+                <button className="login-button">Login</button>
+                
             </div>
             </nav>
 
