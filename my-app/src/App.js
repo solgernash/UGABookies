@@ -6,6 +6,7 @@ import BasketballBet from './Components/BasketballBet';
 import FootballBet from './Components/FootballBet';
 import UltimateFrBet from './Components/UltimateFrBet';
 import Instructions from './Components/instructions';
+import Bets from './Components/myBets';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/instructions' element={<Instructions />} />
           <Route path='/Basketball' element={<BasketballBet />} />
           <Route path='/Football' element={<FootballBet />} />
+          <Route path='/Bets' element={<Bets />} />
           <Route path='/Ultimate_Frisbee' element={<UltimateFrBet />} />
         </Routes>
       </div>

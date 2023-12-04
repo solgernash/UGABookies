@@ -5,6 +5,9 @@ import MatchupList from "./MatchupList";
 import { DUMMY_BASKETBALL } from "./DUMMY_BASKETBALL";
 import './BasketballBet.css'
 import Card from "./Card";
+import BetList from './BetList';
+import BasketballForm from "./BasketballForm";
+
 
 const BasketballBet = (props) => {
     const [matchupList, setMatchupList] = useState(DUMMY_BASKETBALL);
@@ -35,9 +38,29 @@ const BasketballBet = (props) => {
         console.log(enteredAmount);
 
         event.preventDefault();
+        const userData = {
+            name: selected,
+            amount: enteredAmount,
+        };
+
         setEnteredAmount('');
         setSelected('');
     }; //submitHandler
+
+    const addUserHandler = (newUser) => {
+        setBetList((prevUsersList) => [
+            ...prevUsersList, {...newUser},
+        ]);
+    }
+
+    const DUMMY_BETS = [
+        {
+            name: "team name",
+            amount: 20
+        },
+    ];
+
+    const [betList, setBetList] = useState(DUMMY_BETS);
 
     return(
         <>
@@ -63,27 +86,10 @@ const BasketballBet = (props) => {
                 <h1 className="Header">Your entry</h1>
                 <section className="BetForm"> 
                     <MatchupList users={matchupList} className="teamlist"/>
+                    <BasketballForm onAddUser={addUserHandler} />
 
-                    <section className="InputBet">
-                        <Card className="users">
-                        <form onSubmit = {submitHandler}>
-                            <div class="custom-select" >
-                                <h4>Select a Team</h4>
-                                <select value={selected} onChange={handleChange}>
-                                    {options.map(option => (
-                                        <option key={option.value} value={option.value}>
-                                            {option.text}
-                                        </option>
-                                    ))}
-                                </select>
-                                <h4> Input Bet Amount</h4>
-                                <input class="bet-input" type = "number" placeholder = "25" min = "20" max = "100000" step = "5" value={enteredAmount} onChange={amountChangeHandler} id = "input-form"/>
-                                <br/>
-                                <button class="button-50" type = "submit" id = "submit-btn">Submit</button>
-                            </div>
-                        </form>
-                        </Card>
-                    </section>
+            
+                    <BetList users={betList} />
 
                 </section>
             </div>
